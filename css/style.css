@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff5fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container,
+#form-menu,
+#form-joc {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#main-container {
+    display: flex;
+}
+
+header {
+    background: rgba(255,255,255,0.7);
+    padding: 18px 35px;
+    border-radius: 25px;
+}
+
+h1, h2 {
+    color: #c2185b;
+    margin: 0;
+}
+
+input[type="button"] {
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 22px;
+    border: none;
+    background: #f48fb1;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #ec407a;
+}
+
+.secundario {
+    background: #f8bbd0;
+    color: #880e4f;
+}
+
+/* CARD */
+#config-card {
+    background: rgba(255,255,255,0.85);
+    padding: 35px 40px;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.config-inputs {
+    display: flex;
+    gap: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #c2185b;
+}
+
+.campo input {
+    width: 70px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid #f48fb1;
+}
+
+.acciones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.acciones input {
+    width: 100%;
+}
+
+#marc-puzzle {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+}
+
+#fondo-solucion {
+    position: absolute;
+    inset: 0;
+    filter: blur(4px);
+    opacity: 0.35;
+    z-index: 0;
+}
+
+#peces-puzzle {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.peca {
+    position: absolute;
+    cursor: grab;
+}
+
+.peca.colocada {
+    pointer-events: none;
+    cursor: default;
+}
+
+#btn-musica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    cursor: pointer;
+}
+
+
+#collage {
+    width: 100%;
+    min-height: 100vh;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(244,143,177,0.30),
+        transparent 65%
+    );
+}
+
+#collage-fotos {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#collage-fotos img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+#collage-fotos img:hover {
+    transform: scale(1.06) rotate(0deg);
+    z-index: 10;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+}
+
+#collage-fotos img:nth-child(1) {
+    top: 40px;
+    left: 60px;
+    transform: rotate(-4deg);
+}
+
+#collage-fotos img:nth-child(2) {
+    top: 70px;
+    left: 300px;
+    transform: rotate(3deg);
+}
+
+#collage-fotos img:nth-child(3) {
+    top: 300px;
+    left: 320px;
+    transform: rotate(-2.5deg);
+}
+
+#collage-fotos img:nth-child(4) {
+    top: 260px;
+    left: 65px;
+    transform: rotate(2deg);
+}
+
+#volverMenu, #volverInicioDesdeJuego{ 
+    margin-top: 25px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+}
+
+body::before,
+body::after {
+    content: "❤";
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 220px;
+    color: rgba(194, 24, 91, 0.08);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before { left: 80px; }
+body::after  { right: 80px; }
+
+#felicitacio {
+    position: absolute;
+    inset: 0;
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 5;
+    border-radius: 25px;
+}
+
+#felicitacio h1 {
+    font-size: 56px;
+    color: #c2185b;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}

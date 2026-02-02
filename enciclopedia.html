@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>San Valentín</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="main-container">
+    <header>
+        <h1>FELIZ SAN VALENTÍN MINION🩷🩷🩷🩷</h1>
+    </header>
+
+    <div id="menu-principal">
+        <input type="button" value="PUZZLE" id="btnPuzzle">
+        <input type="button" value="COLLAGE" id="btnCollage">
+    </div>
+</div>
+
+<!-- CONFIGURACIÓN -->
+<div id="form-menu">
+    <div id="config-card">
+        <h2>Configura tu Puzzle</h2>
+        <p>Elige filas y columnas</p>
+
+        <div class="config-inputs">
+            <div class="campo">
+                <label>Filas</label>
+                <input type="number" id="files" min="4" max="8" value="4">
+            </div>
+            <div class="campo">
+                <label>Columnas</label>
+                <input type="number" id="columnes" min="4" max="8" value="4">
+            </div>
+        </div>
+
+        <div class="acciones">
+            <input type="button" value="JUGAR" id="jugar">
+            <input type="button" value="VOLVER AL INICIO" id="volverInicioPuzzle" class="secundario">
+        </div>
+    </div>
+</div>
+
+<!-- JUEGO -->
+<div id="form-joc">
+    <div id="marc-puzzle">
+        <div id="fondo-solucion"></div>
+        <div id="peces-puzzle"></div>
+
+        <div id="felicitacio">
+            <h1>¡Felicidades!</h1>
+        </div>
+    </div>
+
+    <div class="acciones">
+        <input type="button" value="VOLVER AL INICIO" id="volverInicioDesdeJuego" class="secundario">
+    </div>
+</div>
+<!-- COLLAGE --> 
+ <div id="collage"> 
+    <div id="collage-fotos"> 
+        <img src="imatges/img-1.jpg"> 
+        <img src="imatges/img-5.jpg"> 
+        <img src="imatges/img-3.jpg"> 
+        <img src="imatges/img-4.jpg"> 
+    </div> 
+    <input type="button" value="VOLVER AL INICIO" id="volverMenu"> 
+</div>
+
+<!-- BOTÓN MÚSICA -->
+<img src="imatges/musica-on.png" id="btn-musica" alt="Música">
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/SANV.js"></script>
+
+</body>
+</html>
